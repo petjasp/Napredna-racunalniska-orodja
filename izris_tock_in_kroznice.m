@@ -18,10 +18,12 @@ tocke_v_kvadratu = [x_kvadrat; y_kvadrat];
 tocke_zunaj_kroga = [x_kvadrat(razdalja > polmer_kroga); y_kvadrat(razdalja > polmer_kroga)];
 
 hold on;
-%izris kroznice
-plot(kroznica(1,:),kroznica(2,:))
-
 %izris tock v in znotraj kroznice
-plot(tocke_v_krogu(1,:),tocke_v_krogu(2,:),'.')
-plot(tocke_zunaj_kroga(1,:),tocke_zunaj_kroga(2,:),'.')
+plot(tocke_v_krogu(1,:),tocke_v_krogu(2,:),'r.')
+plot(tocke_zunaj_kroga(1,:),tocke_zunaj_kroga(2,:),'k.')
+
+%xlabel('x_os');
+%ylabel('y_os');
+%title('Monte Carlo izračun');
+%legend('kroznica', 'tocke noter', 'tocke zunaj');
 hold off;
